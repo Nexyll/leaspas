@@ -11,9 +11,34 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Accueil - LEASTAS</string>
   </property>
-  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Ajouter un élève</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Ajouter un entretien</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Modifier des données</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
@@ -23,8 +48,39 @@
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>&amp;Fichier</string>
+    </property>
+    <addaction name="actionLOL"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <widget class="QMenu" name="menuStatistiques">
+    <property name="title">
+     <string>&amp;Statistiques</string>
+    </property>
+    <addaction name="action_G_n_rer"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menuStatistiques"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_G_n_rer">
+   <property name="text">
+    <string>&amp;Générer</string>
+   </property>
+  </action>
+  <action name="actionLOL">
+   <property name="text">
+    <string>LOL</string>
+   </property>
+  </action>
+  <action name="actionQuitter">
+   <property name="text">
+    <string>&amp;Quitter</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

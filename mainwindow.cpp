@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <qmessagebox.h>
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -25,3 +27,5 @@ void MainWindow::on_pb_accueil_ajout_evt_pressed()
 {
     ui->tabWidget->setCurrentIndex(2);
 }
+
+

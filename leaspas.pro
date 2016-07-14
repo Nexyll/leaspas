@@ -16,14 +16,19 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     View/eleveview.cpp \
     Controller/elevecontroller.cpp \
-    Model/model.cpp
+    Model/model.cpp \
+    View/evenementview.cpp \
+    Controller/evenementcontroller.cpp
 
 HEADERS  += mainwindow.h \
     View/eleveview.h \
     Controller/elevecontroller.h \
-    Model/model.h
+    Model/model.h \
+    View/evenementview.h \
+    Controller/evenementcontroller.h
 
 FORMS    += mainwindow.ui \
-    View/eleveview.ui
+    View/eleveview.ui \
+    View/evenementview.ui
 
 RESOURCES +=

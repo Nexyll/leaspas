@@ -33,18 +33,18 @@ void Model::verifyStruct()
         query.exec();
 
         query.clear();
-        query.prepare("CREATE TABLE Evenement (id INTEGER PRIMARY KEY AUTOINCREMENT,id_eleve INTEGER  REFERENCES Eleve (id),date DATETIME,origine INTEGER,id_interlocuteur INTEGER)");
+        query.prepare("CREATE TABLE Evenement (id INTEGER PRIMARY KEY AUTOINCREMENT,id_eleve INTEGER REFERENCES Eleve (id),date DATETIME,origine INTEGER,id_interlocuteur INTEGER)");
         query.exec();
    }
 }
 
 void Model::initDb(){
+    if(!QDir("Data").exists()) QDir().mkdir("Data");
     connection = QSqlDatabase::addDatabase("QSQLITE");
     connection.setDatabaseName("Data/database.db");
 
     if(connection.open()){
         verifyStruct();
-
         QString message = "Prêt (connecté à : " + connection.databaseName() + ")";
         statusBar->showMessage(message);
 

@@ -111,6 +111,11 @@
        <attribute name="title">
         <string>Ajouter un élève</string>
        </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="EleveView" name="widget" native="true"/>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="tab_evenement">
        <attribute name="title">
@@ -165,6 +170,14 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>EleveView</class>
+   <extends>QWidget</extends>
+   <header>View\eleveview.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

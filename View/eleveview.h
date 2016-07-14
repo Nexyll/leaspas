@@ -3,6 +3,8 @@
 
 #include <QWidget>
 
+#include <Controller/elevecontroller.h>
+
 namespace Ui {
 class EleveView;
 }
@@ -14,9 +16,15 @@ class EleveView : public QWidget
 public:
     explicit EleveView(QWidget *parent = 0);
     ~EleveView();
+    void setModel(Model *value);
+
+private slots:
+    void on_pbAjoutEleve_pressed();
 
 private:
     Ui::EleveView *ui;
+    EleveController* controller;
+    Model* model;
 };
 
 #endif // ELEVEVIEW_H

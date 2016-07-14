@@ -113,7 +113,7 @@
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
-         <widget class="EleveView" name="widget" native="true"/>
+         <widget class="EleveView" name="eleveView" native="true"/>
         </item>
        </layout>
       </widget>

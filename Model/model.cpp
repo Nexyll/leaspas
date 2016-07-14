@@ -9,6 +9,14 @@ Model::Model(QStatusBar* stb)
     initDb();
 }
 
+void Model::addEleve(QString nom, QString prenom)
+{
+    //statusBar->showMessage("Ajout de l'élève en cours");
+    QString sReq = "INSERT INTO eleve (nom, prenom, motifs) VALUES ('" + nom + "', '" + prenom + "', '00000000000000')";
+    QSqlQuery query(sReq);
+    //statusBar->showMessage(message);
+}
+
 void Model::verifyStruct()
 {
     QSqlQuery query("SELECT COUNT(*) FROM sqlite_master WHERE type = 'table' AND name = 'Eleve'");
@@ -20,7 +28,7 @@ void Model::verifyStruct()
         query.exec();
 
         query.clear();
-        query.prepare("CREATE TABLE Eleve (id INTEGER PRIMARY KEY AUTOINCREMENT,nom VARCHAR(255),prenom VARCHAR(255),sexe CHAR(1),id_etab INTEGER,motifs STRING(16) NOT NULL)");
+        query.prepare("CREATE TABLE Eleve (id INTEGER PRIMARY KEY AUTOINCREMENT,nom VARCHAR(255),prenom VARCHAR(255),sexe CHAR(1),id_etab INTEGER,motifs CHAR(16) NOT NULL)");
         query.exec();
     }
 
@@ -45,11 +53,11 @@ void Model::initDb(){
 
     if(connection.open()){
         verifyStruct();
-        QString message = "Prêt (connecté à : " + connection.databaseName() + ")";
+        message = "Prêt (connecté à : " + connection.databaseName() + ")";
         statusBar->showMessage(message);
 
     }else{
-        QString message = "Erreur de connexion à la BDD : " + connection.lastError().text();
+        message = "Erreur de connexion à la BDD : " + connection.lastError().text();
         QMessageBox::critical(NULL, "Erreur BDD", message);
         statusBar->showMessage(message);
     }

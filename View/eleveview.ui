@@ -27,11 +27,35 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>Renseignez les informations suivante pour finaliser l'ajout d'un élève.</string>
-     </property>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Renseignez les informations suivante pour finaliser l'ajout d'un élève.</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Modifier un élève</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
    <item>
     <widget class="Line" name="line">
@@ -166,7 +190,7 @@
         <item>
          <widget class="QGroupBox" name="groupBox">
           <property name="title">
-           <string>Raison(s)</string>
+           <string>Motif(s)</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_2">
            <property name="leftMargin">
@@ -499,8 +523,6 @@
          </widget>
         </item>
        </layout>
-       <zorder>verticalLayoutWidget</zorder>
-       <zorder>groupBox</zorder>
       </widget>
      </item>
     </layout>

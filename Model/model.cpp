@@ -11,10 +11,9 @@ Model::Model(QStatusBar* stb)
 
 void Model::addEleve(QString nom, QString prenom)
 {
-    //statusBar->showMessage("Ajout de l'élève en cours");
     QString sReq = "INSERT INTO eleve (nom, prenom, motifs) VALUES ('" + nom + "', '" + prenom + "', '00000000000000')";
     QSqlQuery query(sReq);
-    //statusBar->showMessage(message);
+    QMessageBox::information(NULL, "Succès", "L'élève a été ajouté avec succès.");
 }
 
 void Model::verifyStruct()

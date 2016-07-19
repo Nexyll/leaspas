@@ -1,3 +1,3 @@
-# leaspas
+# LEASPAS
 ## TODO
 Décrire ici le projet en MarkDown

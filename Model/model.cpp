@@ -27,6 +27,12 @@ void Model::verifyStruct()
     query.exec();
     query.next();
     //if(query.value(0).toInt() < 9 ){ // 8 tables pour le soft + celles des séquences SQLite
+
+    /*
+     * Il faut trouver un moyen de vérifier si la structure est différente de manière plus propore
+     * qu'en comparant le nombre de table dans la base c'est sans faire beaucoup de requêtes ^^
+     */
+
         QSqlQuery itQuery(connection);
         QFile scriptFile("Script\\databaseInitialStructure.sql");
         if (scriptFile.open(QIODevice::ReadOnly))

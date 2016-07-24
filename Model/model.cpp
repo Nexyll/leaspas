@@ -18,31 +18,39 @@ void Model::addEleve(QString nom, QString prenom)
 
 void Model::verifyStruct()
 {
-    QSqlQuery query("SELECT COUNT(*) FROM sqlite_master WHERE type = 'table' AND name = 'Eleve'");
+    if(!QDir("Logs").exists()) QDir().mkdir("Logs");
+    QFile bddLog("Logs\\BDDLog.txt");
+    bddLog.open(QIODevice::Append | QIODevice::Text);
+    QTextStream bddLogStream(&bddLog);
+
+    QSqlQuery query("SELECT COUNT(*) FROM sqlite_master WHERE type = 'table'");
     query.exec();
     query.next();
-    if(query.value(0).toInt() == 0){
-        query.clear();
-        query.prepare("DROP TABLE Eleve");
-        query.exec();
+    //if(query.value(0).toInt() < 9 ){ // 8 tables pour le soft + celles des séquences SQLite
+        QSqlQuery itQuery(connection);
+        QFile scriptFile("Script\\databaseInitialStructure.sql");
+        if (scriptFile.open(QIODevice::ReadOnly))
+        {
+            // The SQLite driver executes only a single (the first) query in the QSqlQuery
+            //  if the script contains more queries, it needs to be splitted.
+            QStringList scriptQueries = QTextStream(&scriptFile).readAll().split(';');
 
-        query.clear();
-        query.prepare("CREATE TABLE Eleve (id INTEGER PRIMARY KEY AUTOINCREMENT,nom VARCHAR(255),prenom VARCHAR(255),sexe CHAR(1),id_etab INTEGER,motifs CHAR(16) NOT NULL)");
-        query.exec();
-    }
-
-    query.prepare("SELECT COUNT(*) FROM sqlite_master WHERE type = 'table' AND name = 'Evenement'");
-    query.exec();
-    query.next();
-    if(query.value(0).toInt() == 0){
-        query.clear();
-        query.prepare("DROP TABLE Evenement");
-        query.exec();
-
-        query.clear();
-        query.prepare("CREATE TABLE Evenement (id INTEGER PRIMARY KEY AUTOINCREMENT,id_eleve INTEGER REFERENCES Eleve (id),date DATETIME,origine INTEGER,id_interlocuteur INTEGER)");
-        query.exec();
-   }
+            foreach (QString queryTxt, scriptQueries)
+            {
+                if (queryTxt.trimmed().isEmpty()) {
+                    continue;
+                }
+                if (!itQuery.exec(queryTxt))
+                {
+                    bddLogStream << itQuery.lastError().text();
+                    bddLogStream << '\n';
+                }
+                itQuery.finish();
+            }
+        }
+    //}
+        bddLog.flush();
+        bddLog.close();
 }
 
 void Model::initDb(){

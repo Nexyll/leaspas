@@ -1,11 +1,3 @@
-#------------------------------------------------------------
-#        Script SQLite  
-#------------------------------------------------------------
-
-
-#------------------------------------------------------------
-# Table: ELEVE
-#------------------------------------------------------------
 CREATE TABLE ELEVE(
 	ID                INTEGER PRIMARY KEY autoincrement NOT NULL ,
 	nom               TEXT ,
@@ -20,10 +12,6 @@ CREATE TABLE ELEVE(
 	FOREIGN KEY (ID_ORIGINE) REFERENCES ORIGINE(ID)
 );
 
-
-#------------------------------------------------------------
-# Table: ETABLISSEMENT
-#------------------------------------------------------------
 CREATE TABLE ETABLISSEMENT(
 	ID          INTEGER PRIMARY KEY autoincrement NOT NULL ,
 	nom         TEXT ,
@@ -31,19 +19,11 @@ CREATE TABLE ETABLISSEMENT(
 	population  INTEGER
 );
 
-
-#------------------------------------------------------------
-# Table: NIVEAU
-#------------------------------------------------------------
 CREATE TABLE NIVEAU(
 	ID   INTEGER PRIMARY KEY autoincrement NOT NULL ,
 	nom  TEXT
 );
 
-
-#------------------------------------------------------------
-# Table: EVENEMENT
-#------------------------------------------------------------
 CREATE TABLE EVENEMENT(
 	ID            INTEGER PRIMARY KEY autoincrement NOT NULL ,
 	date_evt      NUMERIC ,
@@ -54,10 +34,6 @@ CREATE TABLE EVENEMENT(
 	FOREIGN KEY (ID_ELEVE) REFERENCES ELEVE(ID)
 );
 
-
-#------------------------------------------------------------
-# Table: CATEGORIE
-#------------------------------------------------------------
 CREATE TABLE CATEGORIE(
 	ID    INTEGER PRIMARY KEY autoincrement NOT NULL ,
 	nom   TEXT ,
@@ -66,28 +42,16 @@ CREATE TABLE CATEGORIE(
 	FOREIGN KEY (parent) REFERENCES CATEGORIE(ID)
 );
 
-
-#------------------------------------------------------------
-# Table: ORIGINE
-#------------------------------------------------------------
 CREATE TABLE ORIGINE(
 	ID    INTEGER PRIMARY KEY autoincrement NOT NULL ,
 	type  TEXT
 );
 
-
-#------------------------------------------------------------
-# Table: MOTIF
-#------------------------------------------------------------
 CREATE TABLE MOTIF(
 	ID   INTEGER PRIMARY KEY autoincrement NOT NULL ,
 	nom  TEXT
 );
 
-
-#------------------------------------------------------------
-# Table: RELATION_MOTIF_ELEVE
-#------------------------------------------------------------
 CREATE TABLE RELATION_MOTIF_ELEVE(
 	ID        INTEGER NOT NULL ,
 	ID_ELEVE  INTEGER NOT NULL ,

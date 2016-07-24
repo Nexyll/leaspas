@@ -37,9 +37,7 @@ void Model::verifyStruct()
         QFile scriptFile("Script\\databaseInitialStructure.sql");
         if (scriptFile.open(QIODevice::ReadOnly))
         {
-            // The SQLite driver executes only a single (the first) query in the QSqlQuery
-            //  if the script contains more queries, it needs to be splitted.
-            QStringList scriptQueries = QTextStream(&scriptFile).readAll().split(';');
+            QStringList scriptQueries = QTextStream(&scriptFile).readAll().split(';'); // On sépare les différentes requêtes
 
             foreach (QString queryTxt, scriptQueries)
             {

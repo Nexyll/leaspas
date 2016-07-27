@@ -19,5 +19,4 @@ Ecrit par Nexyll et d'autres gens.
 Leaspas est fourni tel quel, sans garantie quelconque, sous licence GPL.
 
 ## Gestion et organisation du projet
-
-Un Trello est a été créé afin de gérer les différents taches liées au développement du Logiciel. Pour en être n'hésitez pas à contacter les développeurs du projet.
+Une instance Trello a été créée afin de coordonner le processus de développement. Pour y être ajouté, n'hésitez pas à contacter les développeurs.

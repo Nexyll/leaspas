@@ -18,6 +18,8 @@ void Model::addEleve(QString nom, QString prenom)
 
 void Model::verifyStruct()
 {
+    bool ignoreVeriryNbTables = 1;
+
     if(!QDir("Logs").exists()) QDir().mkdir("Logs");
     QFile bddLog("Logs\\BDDLog.txt");
     bddLog.open(QIODevice::Append | QIODevice::Text);
@@ -26,7 +28,7 @@ void Model::verifyStruct()
     QSqlQuery query("SELECT COUNT(*) FROM sqlite_master WHERE type = 'table'");
     query.exec();
     query.next();
-    //if(query.value(0).toInt() < 9 ){ // 8 tables pour le soft + celles des séquences SQLite
+    if(query.value(0).toInt() < 9 || ignoreVeriryNbTables == 1){ // 8 tables pour le soft + celles des séquences SQLite
 
     /*
      * Il faut trouver un moyen de vérifier si la structure est différente de manière plus propore
@@ -52,7 +54,7 @@ void Model::verifyStruct()
                 itQuery.finish();
             }
         }
-    //}
+    }
         bddLog.flush();
         bddLog.close();
 }

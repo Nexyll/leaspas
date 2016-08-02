@@ -9,15 +9,13 @@ Model::Model(QStatusBar* stb)
     initDb();
 }
 
-void Model::addEleve(QString nom, QString prenom)
-{
+void Model::addEleve(QString nom, QString prenom) const {
     QString sReq = "INSERT INTO eleve (nom, prenom, motifs) VALUES ('" + nom + "', '" + prenom + "', '00000000000000')";
     QSqlQuery query(sReq);
     QMessageBox::information(NULL, "Succès", "L'élève a été ajouté avec succès.");
 }
 
-void Model::verifyStruct()
-{
+void Model::verifyStruct() const {
     bool ignoreVeriryNbTables = 1;
 
     if(!QDir("Logs").exists()) QDir().mkdir("Logs");

@@ -46,7 +46,7 @@ CREATE TABLE NIVEAU(
 #------------------------------------------------------------
 CREATE TABLE EVENEMENT(
 	ID            INTEGER PRIMARY KEY autoincrement NOT NULL ,
-	date_evt      NUMERIC ,
+	date_evt      DATE ,
 	ID_CATEGORIE  INTEGER NOT NULL ,
 	ID_ELEVE      INTEGER NOT NULL ,
 	

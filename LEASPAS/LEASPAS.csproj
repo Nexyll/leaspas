@@ -77,6 +77,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Categorie.cs" />
+    <Compile Include="Model\Etablissement.cs" />
+    <Compile Include="Model\Evenement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

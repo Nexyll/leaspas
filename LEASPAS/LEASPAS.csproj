@@ -72,6 +72,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="bar.cs" />
+    <Compile Include="Foo.cs" />
     <Compile Include="Model\Eleve.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

@@ -8,5 +8,12 @@ namespace LEASPAS.Model
 {
     class Origine
     {
+        public int ID { get; set; }
+        public string Type { get; set; }
+
+        public Origine(string type)
+        {
+            Type = type;
+        }
     }
 }

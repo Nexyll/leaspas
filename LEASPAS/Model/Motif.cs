@@ -8,9 +8,7 @@ namespace LEASPAS
 {
     class Motif
     {
-        public int ID { get; set; }
         public string Name { get; set; }
-
         public Motif(string name)
         {
             this.Name = name;

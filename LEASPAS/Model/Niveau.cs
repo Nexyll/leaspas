@@ -8,9 +8,7 @@ namespace LEASPAS.Model
 {
     class Niveau
     {
-        public int ID { get; set; }
         public string Nom { get; set; }
-
         public Niveau(string nom)
         {
             Nom = nom;

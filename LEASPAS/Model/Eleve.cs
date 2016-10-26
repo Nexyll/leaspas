@@ -10,7 +10,6 @@ namespace LEASPAS
 {
     class Eleve
     {
-        public int ID { get; set; }
         public string Nom { get; set; }
         public string Prenom { get; set; }
         public char Sexe { get; set; }
@@ -18,13 +17,20 @@ namespace LEASPAS
         public Niveau Niveau { get; set; } 
         public Origine Origine { get; set; }
         public Etablissement Etablissement { get; set; }
-
-        public Eleve(string nom, string prenom, char sexe, Motif motif)
+        public Eleve(int id, string nom, string prenom, char sexe, Motif motif, Niveau niveau, Origine origine, Etablissement etablissement)
         {
+            ID = id;
             Nom = nom;
             Prenom = prenom;
             Sexe = sexe;
             Motifs.Add(motif);
+            Niveau = niveau;
+            Origine = origine;
+            Etablissement = etablissement;
+        }
+
+        public Eleve()
+        {
         }
     }
 }

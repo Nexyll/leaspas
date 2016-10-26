@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace LEASPAS.Model {
     class Evenement {
-        public int ID { get; set; }
         public DateTime Date { get; set; }
         public List<Categorie> Categories { get; set; }
 

@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace LEASPAS.Model {
     class Categorie {
-        public int ID { get; set; }
         public String Nom { get; set; }
         public Categorie Parent { get; set; }
 
@@ -19,6 +18,7 @@ namespace LEASPAS.Model {
         public Categorie(string nom)
         {
             Nom = nom;
+            Parent = null;
         }
 
         public Categorie()

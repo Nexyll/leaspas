@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace LEASPAS.Model
 {
+    [Serializable]
     class Origine
     {
         public string Type { get; set; }

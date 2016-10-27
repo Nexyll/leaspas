@@ -8,6 +8,7 @@ using LEASPAS.Model;
 
 namespace LEASPAS
 {
+    [Serializable]
     class Eleve
     {
         public string Nom { get; set; }

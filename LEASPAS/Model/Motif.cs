@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace LEASPAS
 {
+    [Serializable]
     class Motif
     {
         public String Nom { get; set; }

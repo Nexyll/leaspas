@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LEASPAS.Model {
+    [Serializable]
     class Etablissement {
         public String Nom { get; set; }
         public String Type { get; set; }

@@ -13,21 +13,22 @@ namespace LEASPAS
         public string Nom { get; set; }
         public string Prenom { get; set; }
         public char Sexe { get; set; }
-        public List<Motif> Motifs { get; } = new List<Motif>();
+        public List<Motif> Motifs { get; set; } = new List<Motif>();
         public Niveau Niveau { get; set; } 
         public Origine Origine { get; set; }
         public Etablissement Etablissement { get; set; }
-        public Eleve(int id, string nom, string prenom, char sexe, Motif motif, Niveau niveau, Origine origine, Etablissement etablissement)
+        public List<Evenement> Evenements { get; set; } = new List<Evenement>();
+
+        public Eleve(string nom, string prenom, char sexe, Niveau niveau, Origine origine, Etablissement etablissement)
         {
-            ID = id;
             Nom = nom;
             Prenom = prenom;
             Sexe = sexe;
-            Motifs.Add(motif);
             Niveau = niveau;
             Origine = origine;
             Etablissement = etablissement;
         }
+
 
         public Eleve()
         {

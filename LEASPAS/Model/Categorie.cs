@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 namespace LEASPAS.Model {
     class Categorie {
         public String Nom { get; set; }
+        /// <summary>
+        /// Parent de la catégorie, = null si la catégorie n'as pas de parent
+        /// </summary>
         public Categorie Parent { get; set; }
 
         public Categorie(string nom, Categorie parent)
@@ -14,7 +17,11 @@ namespace LEASPAS.Model {
             Nom = nom;
             Parent = parent;
         }
-
+        /// <summary>
+        /// Création d'une catégroie sans parent.
+        /// La valeur du parent sera donc mise à NULL
+        /// </summary>
+        /// <param name="nom"></param>
         public Categorie(string nom)
         {
             Nom = nom;

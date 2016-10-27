@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 namespace LEASPAS.Model {
     class Evenement {
         public DateTime Date { get; set; }
-        public List<Categorie> Categories { get; set; }
+        public Categorie Categorie { get; set; }
+        public Eleve Eleve { get; set; }
 
-        public Evenement(DateTime date, List<Categorie> categories)
+        public Evenement(DateTime date, Categorie categorie, Eleve eleve)
         {
             Date = date;
-            Categories = categories;
+            Categorie = categorie;
+            Eleve = eleve;
         }
 
         public Evenement()

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace LEASPAS
 {
     [Serializable]
-    class Motif
+    public class Motif
     {
         public String Nom { get; set; }
         public Motif(string nom)

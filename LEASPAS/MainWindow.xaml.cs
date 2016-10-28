@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Serialization;
 
 namespace LEASPAS
 {
@@ -23,6 +25,14 @@ namespace LEASPAS
         public MainWindow()
         {
             InitializeComponent();
+
+            Motif m = new Motif("LOL");
+
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(Motif));
+            StreamWriter streamWriter = new StreamWriter("Test.xml", false);
+            xmlSerializer.Serialize(streamWriter, m);
+            streamWriter.Close();
+
         }
     }
 }

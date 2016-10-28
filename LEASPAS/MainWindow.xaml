@@ -14,9 +14,19 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
+    <Window.DataContext>
+        <local:DialogsViewModel/>
+    </Window.DataContext>
+    <materialDesign:DialogHost Identifier="RootDialog">
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
         <materialDesign:Card Padding="32" Margin="16">
             <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Center">Here we go !</TextBlock>
         </materialDesign:Card>
+        <Button HorizontalAlignment="Center" Grid.Row="1" Command="{Binding RunEleveDialogCommand}">EleveWindow</Button>
     </Grid>
+    </materialDesign:DialogHost>
 </Window>

@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace LEASPAS.Model
 {
+
     [Serializable]
-    class Niveau
+    public class Niveau
     {
         public string Nom { get; set; }
         public Niveau(string nom)

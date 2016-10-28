@@ -9,15 +9,15 @@ using LEASPAS.Model;
 namespace LEASPAS
 {
     [Serializable]
-    class Eleve
+    public class Eleve
     {
         public string Nom { get; set; }
         public string Prenom { get; set; }
         public char Sexe { get; set; }
-        public List<Motif> Motifs { get; set; } = new List<Motif>();
         public Niveau Niveau { get; set; } 
         public Origine Origine { get; set; }
         public Etablissement Etablissement { get; set; }
+        public List<Motif> Motifs { get; set; } = new List<Motif>();
         public List<Evenement> Evenements { get; set; } = new List<Evenement>();
 
         public Eleve(string nom, string prenom, char sexe, Niveau niveau, Origine origine, Etablissement etablissement)
@@ -32,6 +32,11 @@ namespace LEASPAS
 
 
         public Eleve()
+        {
+        }
+
+        public Eleve(Eleve eleve)
+            :this(eleve.Nom, eleve.Prenom, eleve.Sexe, eleve.Niveau, eleve.Origine, eleve.Etablissement)
         {
         }
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace LEASPAS.Model
 {
     [Serializable]
-    class Origine
+    public class Origine
     {
         public string Type { get; set; }
         public Origine(string type)

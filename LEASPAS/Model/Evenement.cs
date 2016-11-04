@@ -5,8 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LEASPAS.Model {
-
-    [Serializable]
     public class Evenement {
         public DateTime Date { get; set; }
         public Categorie Categorie { get; set; }

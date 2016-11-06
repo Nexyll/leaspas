@@ -1,0 +1,122 @@
+﻿<UserControl x:Class="LEASPAS.GUI.Tabs.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LEASPAS.GUI.Tabs"
+             xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d"
+             VerticalAlignment="Stretch" 
+             HorizontalAlignment="Stretch"
+             >
+
+            <UserControl.Resources>
+                <ResourceDictionary>
+                    <Style x:Key="LargeTileStyle" TargetType="Controls:Tile">
+                        <Setter Property="Height" Value="125" />
+                        <Setter Property="TitleFontSize" Value="14" />
+                        <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
+                        <Setter Property="TextOptions.TextRenderingMode" Value="ClearType" />
+                        <Setter Property="Width" Value="300" />
+                    </Style>
+
+                    <Style x:Key="SmallTileStyle" TargetType="Controls:Tile">
+                        <Setter Property="Height" Value="125" />
+                        <Setter Property="TitleFontSize" Value="10" />
+                        <Setter Property="TextOptions.TextFormattingMode" Value="Ideal" />
+                        <Setter Property="TextOptions.TextRenderingMode" Value="ClearType" />
+                        <Setter Property="Width" Value="147" />
+                    </Style>
+                </ResourceDictionary>
+            </UserControl.Resources>
+
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="auto">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Column="0"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Foreground="{DynamicResource BlackBrush}"
+                       FontFamily="Segoe UI"
+                       FontSize="30"
+                       FontWeight="Light"
+                       Margin="20"
+                       Text="Bienvenue dans LEASPAS !" />
+
+                    <WrapPanel Grid.Row="1"
+                       Grid.Column="0"
+                       Width="940"
+                       Height="Auto"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top">
+                        <Controls:Tile Title="Gérer les évenements"
+                               Margin="3"
+                               Style="{StaticResource LargeTileStyle}"
+                               Background="Teal"
+                               Controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                               HorizontalTitleAlignment="Right">
+                            <iconPacks:PackIconModern Width="40"
+                                             Height="40"
+                                             Kind="Calendar" />
+                        </Controls:Tile>
+                        <Controls:Tile Title="Sauvegardes"
+                               Margin="3"
+                               Style="{StaticResource LargeTileStyle}"
+                               Controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}">
+                            <iconPacks:PackIconMaterial Width="40"
+                                                  Height="40"
+                                                  Kind="BackupRestore" />
+                        </Controls:Tile>
+                        <Controls:Tile Title="Paramètres"
+                               Style="{StaticResource LargeTileStyle}"
+                               Background="DimGray">
+                            <iconPacks:PackIconMaterial Width="40"
+                                             Height="40"
+                                              Kind="Settings" />
+                        </Controls:Tile>
+                        <Controls:Tile Title="Gestion des élèves"
+                               Style="{StaticResource LargeTileStyle}"
+                               Background="#D2691E"
+                               HorizontalTitleAlignment="Right">
+                            <iconPacks:PackIconModern Width="40"
+                                             Height="40"
+                                             Kind="PeopleMultiple" />
+                        </Controls:Tile>
+                        <Controls:Tile Title="Connecté"
+                               TitleFontSize="16"
+                               HorizontalTitleAlignment="Center"
+                               VerticalTitleAlignment="Top"
+                               CountFontSize="42"
+                               Style="{StaticResource SmallTileStyle}"
+                               Background="#FF842D"
+                               IsEnabled="False" >
+                            <iconPacks:PackIconFontAwesome
+                                   Width="40"
+                                   Height="40"
+                                    Margin="10"
+                                   Kind="Database"/>
+                        </Controls:Tile>
+                        <Controls:Tile Title="Contribuer"
+                               Style="{StaticResource SmallTileStyle}"
+                               Background="#1E90FF"
+                               >
+                            <iconPacks:PackIconOcticons Width="40"
+                                               Height="40"
+                                               Kind="MarkGithub" />
+                        </Controls:Tile>
+                        <Controls:Tile Title="Édition des statistiques"
+                               Style="{StaticResource LargeTileStyle}"
+                               Background="Green">
+                            <iconPacks:PackIconEntypo Width="40"
+                                             Height="40"
+                                             Kind="LineGraph" />
+                        </Controls:Tile>
+                    </WrapPanel>
+                </Grid>
+            </ScrollViewer>
+        </UserControl>

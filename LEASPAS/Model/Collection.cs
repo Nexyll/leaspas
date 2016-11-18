@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace LEASPAS.Model
 {
     [Serializable]
-    class Container
+    class Collection
     {
         public List<Categorie> Categories { get; set; }
         public List<Eleve> Eleves { get; set; }
@@ -26,7 +26,7 @@ namespace LEASPAS.Model
         /// <param name="motifs"></param>
         /// <param name="niveaux"></param>
         /// <param name="origines"></param>
-        public Container(List<Categorie> categories, List<Eleve> eleves, List<Etablissement> etablissements, List<Evenement> evenements, List<Motif> motifs, List<Niveau> niveaux, List<Origine> origines)
+        public Collection(List<Categorie> categories, List<Eleve> eleves, List<Etablissement> etablissements, List<Evenement> evenements, List<Motif> motifs, List<Niveau> niveaux, List<Origine> origines)
         {
             Categories = categories;
             Eleves = eleves;
@@ -40,7 +40,7 @@ namespace LEASPAS.Model
         /// Constructeur par copie
         /// </summary>
         /// <param name="db">Database à copiée</param>
-        public Container(Container db)
+        public Collection(Collection db)
         {
             Categories = db.Categories.ToList();
             Eleves = db.Eleves.ToList();
@@ -51,7 +51,7 @@ namespace LEASPAS.Model
             Origines = db.Origines.ToList();
         }
 
-        public Container()
+        public Collection()
         {
             Categories = new List<Categorie>();
             Eleves = new List<Eleve>();

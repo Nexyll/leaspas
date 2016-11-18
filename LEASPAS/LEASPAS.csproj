@@ -98,7 +98,7 @@
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\Container.cs" />
+    <Compile Include="Model\Collection.cs" />
     <Compile Include="Model\Eleve.cs" />
   </ItemGroup>
   <ItemGroup>

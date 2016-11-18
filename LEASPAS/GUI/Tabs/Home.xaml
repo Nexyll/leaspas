@@ -4,41 +4,39 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LEASPAS.GUI.Tabs"
-             xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d"
              VerticalAlignment="Stretch" 
              HorizontalAlignment="Stretch"
              >
 
-            <UserControl.Resources>
-                <ResourceDictionary>
-                    <Style x:Key="LargeTileStyle" TargetType="Controls:Tile">
-                        <Setter Property="Height" Value="125" />
-                        <Setter Property="TitleFontSize" Value="14" />
-                        <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
-                        <Setter Property="TextOptions.TextRenderingMode" Value="ClearType" />
-                        <Setter Property="Width" Value="300" />
-                    </Style>
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LargeTileStyle" TargetType="controls:Tile">
+                <Setter Property="Height" Value="125" />
+                <Setter Property="TitleFontSize" Value="14" />
+                <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
+                <Setter Property="TextOptions.TextRenderingMode" Value="ClearType" />
+                <Setter Property="Width" Value="300" />
+            </Style>
 
-                    <Style x:Key="SmallTileStyle" TargetType="Controls:Tile">
-                        <Setter Property="Height" Value="125" />
-                        <Setter Property="TitleFontSize" Value="10" />
-                        <Setter Property="TextOptions.TextFormattingMode" Value="Ideal" />
-                        <Setter Property="TextOptions.TextRenderingMode" Value="ClearType" />
-                        <Setter Property="Width" Value="147" />
-                    </Style>
-                </ResourceDictionary>
-            </UserControl.Resources>
+            <Style x:Key="SmallTileStyle" TargetType="controls:Tile">
+                <Setter Property="Height" Value="125" />
+                <Setter Property="TitleFontSize" Value="10" />
+                <Setter Property="TextOptions.TextFormattingMode" Value="Ideal" />
+                <Setter Property="TextOptions.TextRenderingMode" Value="ClearType" />
+                <Setter Property="Width" Value="147" />
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
 
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="auto">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition />
-                    </Grid.RowDefinitions>
-
-                    <TextBlock Grid.Column="0"
+        <TextBlock Grid.Column="0"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        Foreground="{DynamicResource BlackBrush}"
@@ -48,75 +46,77 @@
                        Margin="20"
                        Text="Bienvenue dans LEASPAS !" />
 
-                    <WrapPanel Grid.Row="1"
+        <WrapPanel Grid.Row="1"
                        Grid.Column="0"
-                       Width="940"
+                       Width="Auto"
                        Height="Auto"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Top">
-                        <Controls:Tile Title="Gérer les évenements"
+            <controls:Tile Title="Gérer les évenements"
                                Margin="3"
                                Style="{StaticResource LargeTileStyle}"
                                Background="Teal"
-                               Controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
-                               HorizontalTitleAlignment="Right">
-                            <iconPacks:PackIconModern Width="40"
+                               controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                               HorizontalTitleAlignment="Center">
+                <iconPacks:PackIconModern Width="40"
                                              Height="40"
                                              Kind="Calendar" />
-                        </Controls:Tile>
-                        <Controls:Tile Title="Sauvegardes"
-                               Margin="3"
-                               Style="{StaticResource LargeTileStyle}"
-                               Controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}">
-                            <iconPacks:PackIconMaterial Width="40"
-                                                  Height="40"
-                                                  Kind="BackupRestore" />
-                        </Controls:Tile>
-                        <Controls:Tile Title="Paramètres"
-                               Style="{StaticResource LargeTileStyle}"
-                               Background="DimGray">
-                            <iconPacks:PackIconMaterial Width="40"
-                                             Height="40"
-                                              Kind="Settings" />
-                        </Controls:Tile>
-                        <Controls:Tile Title="Gestion des élèves"
+            </controls:Tile>
+            <controls:Tile Title="Gestion des élèves"
                                Style="{StaticResource LargeTileStyle}"
                                Background="#D2691E"
-                               HorizontalTitleAlignment="Right">
-                            <iconPacks:PackIconModern Width="40"
+                                HorizontalTitleAlignment="Center"
+                               controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                           
+                           >
+                <iconPacks:PackIconModern Width="40"
                                              Height="40"
                                              Kind="PeopleMultiple" />
-                        </Controls:Tile>
-                        <Controls:Tile Title="Connecté"
-                               TitleFontSize="16"
-                               HorizontalTitleAlignment="Center"
-                               VerticalTitleAlignment="Top"
-                               CountFontSize="42"
-                               Style="{StaticResource SmallTileStyle}"
-                               Background="#FF842D"
-                               IsEnabled="False" >
-                            <iconPacks:PackIconFontAwesome
-                                   Width="40"
-                                   Height="40"
-                                    Margin="10"
-                                   Kind="Database"/>
-                        </Controls:Tile>
-                        <Controls:Tile Title="Contribuer"
-                               Style="{StaticResource SmallTileStyle}"
-                               Background="#1E90FF"
-                               >
-                            <iconPacks:PackIconOcticons Width="40"
-                                               Height="40"
-                                               Kind="MarkGithub" />
-                        </Controls:Tile>
-                        <Controls:Tile Title="Édition des statistiques"
+            </controls:Tile>
+            <controls:Tile Title="Sauvegardes"
+                               Margin="3"
                                Style="{StaticResource LargeTileStyle}"
-                               Background="Green">
-                            <iconPacks:PackIconEntypo Width="40"
+                           controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                           HorizontalTitleAlignment="Center"
+                               >
+                <iconPacks:PackIconMaterial Width="40"
+                                                  Height="40"
+                                                  Kind="BackupRestore" />
+            </controls:Tile>
+            <controls:Tile Title="Édition des statistiques"
+                               Style="{StaticResource LargeTileStyle}"
+                               Background="Green"
+                           controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                           HorizontalTitleAlignment="Center">
+                <iconPacks:PackIconEntypo Width="40"
                                              Height="40"
                                              Kind="LineGraph" />
-                        </Controls:Tile>
-                    </WrapPanel>
-                </Grid>
-            </ScrollViewer>
-        </UserControl>
+            </controls:Tile>
+            <StackPanel Orientation="Horizontal">
+                <controls:Tile Title="Paramètres"
+                               Style="{StaticResource SmallTileStyle}"
+                               Background="DimGray"
+                               controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                               HorizontalTitleAlignment="Center">
+                    <iconPacks:PackIconMaterial Width="40"
+                                             Height="40"
+                                              Kind="Settings" />
+                </controls:Tile>
+                <controls:Tile Title="Contribuer"
+                               Style="{StaticResource SmallTileStyle}"
+                               Background="#1E90FF"
+                               controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                               HorizontalTitleAlignment="Center"
+                               >
+                    <iconPacks:PackIconOcticons Width="40"
+                                               Height="40"
+                                               Kind="MarkGithub" />
+                </controls:Tile>
+            </StackPanel>
+            
+        </WrapPanel>
+    </Grid>
+</UserControl>
+
+
+

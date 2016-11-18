@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LEASPAS.Model {
-
+    /// <summary>
+    /// Représente un rendez-vous avec l'élève.
+    /// </summary>
     [Serializable]
     public class Evenement {
         public DateTime Date { get; set; }

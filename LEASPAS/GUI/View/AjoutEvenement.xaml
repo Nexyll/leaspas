@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="LEASPAS.GUI.View.AjoutEvenement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LEASPAS.GUI.View"
+             mc:Ignorable="d">
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0">Date</Label>
+        <DatePicker Grid.Row="0" Grid.Column="1"></DatePicker>
+        
+        <Label Grid.Row="1" Grid.Column="0">Motif</Label>
+        <ComboBox Grid.Row="1" Grid.Column="1">
+            <ComboBoxItem>Premier Motif</ComboBoxItem>
+            <ComboBoxItem>Deuxième motif</ComboBoxItem>
+        </ComboBox>
+    </Grid>
+</UserControl>
+

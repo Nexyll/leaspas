@@ -89,8 +89,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="GUI\Core\EventOptions.xaml.cs">
+      <DependentUpon>EventOptions.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Core\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\AjoutEvenement.xaml.cs">
+      <DependentUpon>AjoutEvenement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\EventsView.xaml.cs">
+      <DependentUpon>EventsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -147,7 +156,19 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Page Include="GUI\Core\EventOptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GUI\Core\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\AjoutEvenement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\EventsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

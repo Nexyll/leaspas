@@ -10,22 +10,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Home = LEASPAS.GUI.Core.Home;
 
-namespace LEASPAS
+namespace LEASPAS.GUI.View
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour AjoutEvenement.xaml
     /// </summary>
-    public partial class MainWindow
+    public partial class AjoutEvenement : UserControl
     {
-        public Model.Collection Collection { get; set; } 
-        public MainWindow()
+        private MainWindow _mainWindow;
+        public AjoutEvenement(MainWindow mainWindow)
         {
             InitializeComponent();
-            ContentControl.Content = new Home(this);
-            
+            _mainWindow = mainWindow;
         }
     }
 }

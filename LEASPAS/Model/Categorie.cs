@@ -5,7 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LEASPAS.Model {
-
+    /// <summary>
+    /// Représente les catégories d'évènements. 
+    /// Un évènement a forcément une seule et unique catégorie, nécéssairement une catégorie enfant, sauf si la catégorie parente n'a pas d'enfant (cas de "visite à domicile").
+    /// </summary>
     public class Categorie {
 
         public String Nom { get; set; }

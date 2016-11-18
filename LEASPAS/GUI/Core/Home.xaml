@@ -53,6 +53,8 @@
                        HorizontalAlignment="Center"
                        VerticalAlignment="Top">
             <controls:Tile Title="Gérer les évenements"
+                           Name="TileManageEvents"
+                           Click="TileManageEvents_OnClick"
                                Margin="3"
                                Style="{StaticResource LargeTileStyle}"
                                Background="Teal"

@@ -89,10 +89,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="GUI\Tabs\Event.xaml.cs">
-      <DependentUpon>Event.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Tabs\Home.xaml.cs">
+    <Compile Include="GUI\Core\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
@@ -150,11 +147,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Page Include="GUI\Tabs\Event.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="GUI\Tabs\Home.xaml">
+    <Page Include="GUI\Core\Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

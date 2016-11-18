@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace LEASPAS.Model
 {
     [Serializable]
-    class Collection
+    public class Collection
     {
         public List<Categorie> Categories { get; set; }
         public List<Eleve> Eleves { get; set; }

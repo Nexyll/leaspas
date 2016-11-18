@@ -4,25 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LEASPAS"
-        xmlns:tab="clr-namespace:LEASPAS.GUI.Tabs"
         xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
         Title="Leaspas" Height="600" Width="1000">
     <Grid>
-        <controls:MetroAnimatedTabControl>
-            <TabItem Header="Accueil">
-                <tab:Home></tab:Home>
-            </TabItem>
-            <TabItem Header="Événements">
-                <tab:Event></tab:Event>
-            </TabItem>
-            <TabItem Header="Élèves">
-
-            </TabItem>
-            <TabItem Header="Statistiques">
-                <Label>Bonjour</Label>
-            </TabItem>
-        </controls:MetroAnimatedTabControl>
+        <controls:TransitioningContentControl x:Name="ContentControl" Transition="Left"/>
     </Grid>
 </controls:MetroWindow>
 

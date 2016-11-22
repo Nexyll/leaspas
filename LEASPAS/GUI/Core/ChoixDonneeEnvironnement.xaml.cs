@@ -17,25 +17,25 @@ using LEASPAS.GUI.View;
 namespace LEASPAS.GUI.Core
 {
     /// <summary>
-    /// Logique d'interaction pour EventOptions.xaml
+    /// Logique d'interaction pour ChoixDonneeEnvironnement.xaml
     /// </summary>
-    public partial class EventOptions : UserControl
+    public partial class ChoixDonneeEnvironnement : UserControl
     {
         private MainWindow _mainWindow;
-        public EventOptions(MainWindow mainWindow)
+        public ChoixDonneeEnvironnement(MainWindow mainWindow)
         {
             InitializeComponent();
             _mainWindow = mainWindow;
         }
 
-        private void TileAjoutEvenement_OnClick(object sender, RoutedEventArgs e)
+        private void TileGestionMotifs_OnClick(object sender, RoutedEventArgs e)
         {
-            _mainWindow.ContentControl.Content = new AjoutEvenement(_mainWindow);
+            _mainWindow.ContentControl.Content = new ListeMotifs(_mainWindow);
         }
 
-        private void TileEventsView_OnClick(object sender, RoutedEventArgs e)
+        private void TileGestionOrigines_OnClick(object sender, RoutedEventArgs e)
         {
-            _mainWindow.ContentControl.Content = new EventsView(_mainWindow);
+            _mainWindow.ContentControl.Content = new ListeOrigines(_mainWindow);
         }
     }
 }

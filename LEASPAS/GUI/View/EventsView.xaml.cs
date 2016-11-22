@@ -20,9 +20,11 @@ namespace LEASPAS.GUI.View
     /// </summary>
     public partial class EventsView : UserControl
     {
-        public EventsView()
+        private MainWindow _mainWindow;
+        public EventsView(MainWindow mainWindow)
         {
             InitializeComponent();
+            _mainWindow = mainWindow;
         }
     }
 }

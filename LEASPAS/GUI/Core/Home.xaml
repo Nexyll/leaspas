@@ -75,6 +75,28 @@
                                              Height="40"
                                              Kind="PeopleMultiple" />
             </controls:Tile>
+            <controls:Tile Title="Édition des statistiques"
+                               Style="{StaticResource LargeTileStyle}"
+                               Background="Green"
+                           controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                           HorizontalTitleAlignment="Center">
+                <iconPacks:PackIconEntypo Width="40"
+                                             Height="40"
+                                             Kind="LineGraph" />
+            </controls:Tile>
+            <controls:Tile Title="Editer les données d'environnement"
+                               Margin="3"
+                           Name="TileEditionDonnéesEnvironnements"
+                           Click="TileEditionDonnéesEnvironnements_OnClick"
+                               Style="{StaticResource LargeTileStyle}"
+                           Background="BlueViolet"
+                           controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                           HorizontalTitleAlignment="Center"
+                               >
+                <iconPacks:PackIconModern Width="40"
+                                                  Height="40"
+                                                  Kind="City" />
+            </controls:Tile>
             <controls:Tile Title="Sauvegardes"
                                Margin="3"
                                Style="{StaticResource LargeTileStyle}"
@@ -84,15 +106,6 @@
                 <iconPacks:PackIconMaterial Width="40"
                                                   Height="40"
                                                   Kind="BackupRestore" />
-            </controls:Tile>
-            <controls:Tile Title="Édition des statistiques"
-                               Style="{StaticResource LargeTileStyle}"
-                               Background="Green"
-                           controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
-                           HorizontalTitleAlignment="Center">
-                <iconPacks:PackIconEntypo Width="40"
-                                             Height="40"
-                                             Kind="LineGraph" />
             </controls:Tile>
             <StackPanel Orientation="Horizontal">
                 <controls:Tile Title="Paramètres"

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using LEASPAS.Model;
 using Home = LEASPAS.GUI.Core.Home;
 
 namespace LEASPAS
@@ -24,8 +25,14 @@ namespace LEASPAS
         public MainWindow()
         {
             InitializeComponent();
+            Collection = new Collection();
+            Collection.Motifs.Add(new Motif("Bonjour"));
+            Collection.Motifs.Add(new Motif("Bonjour"));
+            Collection.Motifs.Add(new Motif("Bonjour"));
+            Collection.Motifs.Add(new Motif("Bonjour"));
+            Collection.Motifs.Add(new Motif("Bonjour"));
+            Collection.Origines.Add(new Origine("Test origine"));
             ContentControl.Content = new Home(this);
-            
         }
     }
 }

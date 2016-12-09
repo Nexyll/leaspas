@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LEASPAS.GUI.View;
+using LEASPAS.GUI.View.Etablissement;
+using ListeMotifs = LEASPAS.GUI.View.Motif.ListeMotifs;
+using NiveauVue = LEASPAS.GUI.View.Niveau.NiveauVue;
 
 namespace LEASPAS.GUI.Core
 {
@@ -36,6 +39,16 @@ namespace LEASPAS.GUI.Core
         private void TileGestionOrigines_OnClick(object sender, RoutedEventArgs e)
         {
             _mainWindow.ContentControl.Content = new ListeOrigines(_mainWindow);
+        }
+
+        private void TileGestionNiveau_OnClick(object sender, RoutedEventArgs e)
+        {
+            _mainWindow.ContentControl.Content = new NiveauVue(_mainWindow);
+        }
+
+        private void TileGestionEtablissements_OnClick(object sender, RoutedEventArgs e)
+        {
+            _mainWindow.ContentControl.Content = new VueEtablissements(_mainWindow);
         }
     }
 }

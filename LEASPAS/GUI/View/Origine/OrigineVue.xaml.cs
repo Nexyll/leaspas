@@ -17,7 +17,7 @@ using LEASPAS.Model;
 namespace LEASPAS.GUI.View
 {
     /// <summary>
-    /// Logique d'interaction pour ListeOrigines.xaml
+    /// Logique d'interaction pour OrigineVue.xaml
     /// </summary>
     public partial class ListeOrigines : UserControl
     {

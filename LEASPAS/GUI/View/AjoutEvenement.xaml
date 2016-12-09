@@ -13,16 +13,22 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
         <Label Grid.Row="0" Grid.Column="0">Date</Label>
         <DatePicker Grid.Row="0" Grid.Column="1"></DatePicker>
-        
-        <Label Grid.Row="1" Grid.Column="0">Motif</Label>
-        <ComboBox Grid.Row="1" Grid.Column="1">
-            <ComboBoxItem>Premier Motif</ComboBoxItem>
-            <ComboBoxItem>Deuxième motif</ComboBoxItem>
-        </ComboBox>
+
+            <Label Grid.Row="1" Grid.Column="0">Motifs</Label>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+            <ListBox Name="ListBoxMotifs" Margin="4 0 4 0"/>
+            <StackPanel Margin="4">
+                <Button Name="BouttonAjoutMotif" Click="BouttonAjoutMotif_OnClick">&gt;&gt;</Button>
+                <Button>&lt;&lt;</Button>
+            </StackPanel>
+            <ListBox Name="ListBoxMotifsEvenement" Margin="4 0 4 0" />
+        </StackPanel>
+
     </Grid>
 </UserControl>
 

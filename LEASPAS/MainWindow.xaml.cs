@@ -34,5 +34,10 @@ namespace LEASPAS
             Collection.Origines.Add(new Origine("Test origine"));
             ContentControl.Content = new Home(this);
         }
+
+        private void Accueil_OnClick(object sender, RoutedEventArgs e)
+        {
+            ContentControl.Content = new Home(this);
+        }
     }
 }

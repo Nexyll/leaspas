@@ -25,7 +25,10 @@ namespace LEASPAS.Model
                 OnPropertyChanged();
             }
         }
-
+        /// <summary>
+        /// Constructeur
+        /// </summary>
+        /// <param name="nom">Nom de l'origine</param>
         public Origine(string nom)
         {
             Nom = nom;

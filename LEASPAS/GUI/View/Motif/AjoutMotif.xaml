@@ -1,16 +1,18 @@
-﻿<Window x:Class="LEASPAS.GUI.View.AjoutEditionOrigine"
+﻿<Window x:Class="LEASPAS.GUI.View.Motif.AjoutMotif"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LEASPAS.GUI.View"
-        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+                xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+
         mc:Ignorable="d"
-        Title="AjoutEditionOrigine">
+        Title="AjoutMotif"
+        Width="400">
     <StackPanel>
-        <TextBox controls:TextBoxHelper.Watermark="Saisissez le nom de la nouvelle origine"
+        <TextBox controls:TextBoxHelper.Watermark="Saisissez le nom du nouveau motif"
              controls:TextBoxHelper.UseFloatingWatermark="True" 
-                 Text="{Binding Origine.Nom}"
+                 Text="{Binding Motif.Nom}"
                  Name="TextBoxNomMotif" />
         <Button Name="ButtonValidation" Click="ButtonValidation_OnClick">Valider</Button>
     </StackPanel>

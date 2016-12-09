@@ -46,6 +46,7 @@
         </controls:Tile>
         <controls:Tile Title="Gérer les établissements"
                        Name="TileGestionEtablissements"
+                       Click="TileGestionEtablissements_OnClick"
                                Margin="3"
                                Style="{StaticResource LargeTileStyle}"
                                controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
@@ -57,6 +58,7 @@
         <controls:Tile Title="Gérer les niveaux"
                        Name="TileGestionNiveau"
                        Background="BlueViolet"
+                       Click="TileGestionNiveau_OnClick"
                                Margin="3"
                                Style="{StaticResource LargeTileStyle}"
                                controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"

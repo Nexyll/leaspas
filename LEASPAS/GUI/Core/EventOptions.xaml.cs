@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LEASPAS.GUI.View;
+using LEASPAS.Model;
 
 namespace LEASPAS.GUI.Core
 {
@@ -30,7 +31,8 @@ namespace LEASPAS.GUI.Core
 
         private void TileAjoutEvenement_OnClick(object sender, RoutedEventArgs e)
         {
-            _mainWindow.ContentControl.Content = new AjoutEvenement(_mainWindow);
+            Evenement evenement = new Evenement();
+            _mainWindow.ContentControl.Content = new AjoutEvenement(_mainWindow, evenement);
         }
 
         private void TileEventsView_OnClick(object sender, RoutedEventArgs e)

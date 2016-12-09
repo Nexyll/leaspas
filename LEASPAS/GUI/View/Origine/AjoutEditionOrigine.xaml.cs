@@ -30,7 +30,7 @@ namespace LEASPAS.GUI.View
 
         private void ButtonValidation_OnClick(object sender, RoutedEventArgs e)
         {
-            if (TextBoxNomMotif.Text != "")
+            if (TextBoxNomOrigine.Text != "")
             {
                 DialogResult = true;
             }

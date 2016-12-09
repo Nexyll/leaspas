@@ -112,23 +112,35 @@
     <Compile Include="GUI\Core\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GUI\View\AjoutEditionOrigine.xaml.cs">
+    <Compile Include="GUI\View\Etablissement\VueEtablissement.xaml.cs">
+      <DependentUpon>VueEtablissement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\Etablissement\VueEtablissements.xaml.cs">
+      <DependentUpon>VueEtablissements.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\Origine\AjoutEditionOrigine.xaml.cs">
       <DependentUpon>AjoutEditionOrigine.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI\View\AjoutEvenement.xaml.cs">
       <DependentUpon>AjoutEvenement.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GUI\View\AjoutMotif.xaml.cs">
+    <Compile Include="GUI\View\Niveau\AjoutModificationNiveau.xaml.cs">
+      <DependentUpon>AjoutModificationNiveau.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\Motif\AjoutMotif.xaml.cs">
       <DependentUpon>AjoutMotif.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI\View\EventsView.xaml.cs">
       <DependentUpon>EventsView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GUI\View\ListeMotifs.xaml.cs">
+    <Compile Include="GUI\View\Motif\ListeMotifs.xaml.cs">
       <DependentUpon>ListeMotifs.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GUI\View\ListeOrigines.xaml.cs">
-      <DependentUpon>ListeOrigines.xaml</DependentUpon>
+    <Compile Include="GUI\View\Origine\OrigineVue.xaml.cs">
+      <DependentUpon>OrigineVue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\Niveau\NiveauVue.xaml.cs">
+      <DependentUpon>NiveauVue.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -198,7 +210,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GUI\View\AjoutEditionOrigine.xaml">
+    <Page Include="GUI\View\Etablissement\VueEtablissement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\Etablissement\VueEtablissements.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\Origine\AjoutEditionOrigine.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -206,7 +226,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GUI\View\AjoutMotif.xaml">
+    <Page Include="GUI\View\Niveau\AjoutModificationNiveau.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\Motif\AjoutMotif.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -214,11 +238,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GUI\View\ListeMotifs.xaml">
+    <Page Include="GUI\View\Motif\ListeMotifs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GUI\View\ListeOrigines.xaml">
+    <Page Include="GUI\View\Origine\OrigineVue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\Niveau\NiveauVue.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

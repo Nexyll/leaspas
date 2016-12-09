@@ -23,6 +23,9 @@ namespace LEASPAS.Model {
 
         public Evenement()
         {
+            Date = new DateTime();
+            Categorie = new Categorie();
+            Eleve = new Eleve();
         }
     }
 }

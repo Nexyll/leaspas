@@ -11,31 +11,34 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using LEASPAS.Model;
 
-namespace LEASPAS.GUI.View
+
+namespace LEASPAS.GUI.View.Niveau
 {
+    using Niveau = LEASPAS.Model.Niveau;
     /// <summary>
-    /// Logique d'interaction pour AjoutMotif.xaml
+    /// Logique d'interaction pour AjoutEditionNiveau.xaml
     /// </summary>
-    public partial class AjoutMotif : Window
+    public partial class AjoutModificationNiveau : Window
     {
-        public Motif Motif { get; set; }
-        public AjoutMotif(Motif motif)
+        public Niveau Niveau { get; set; }
+        public AjoutModificationNiveau(Niveau niveau)
         {
             InitializeComponent();
             DataContext = this;
-            Motif = motif;
+            Niveau = niveau;
         }
 
         private void ButtonValidation_OnClick(object sender, RoutedEventArgs e)
         {
-            if (TextBoxNomMotif.Text != "")
+            if (TextBoxNomNiveau.Text != "")
             {
                 DialogResult = true;
             }
             else
             {
-                MessageBox.Show("Erreur", "Un motif ne doit pas être vide");
+                MessageBox.Show("Un niveau doit avoir un nom", "Erreur");
             }
         }
     }

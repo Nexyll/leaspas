@@ -8,7 +8,16 @@
         mc:Ignorable="d"
         Title="Leaspas" Height="600" Width="1000">
     <Grid>
-        <controls:TransitioningContentControl x:Name="ContentControl" Transition="Left"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <Button Name="Accueil" Click="Accueil_OnClick">Retour à l'accueil</Button>
+        </StackPanel>
+        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+            <controls:TransitioningContentControl x:Name="ContentControl" Transition="Left" Grid.Row="1"/>
+        </ScrollViewer>
     </Grid>
 </controls:MetroWindow>
 

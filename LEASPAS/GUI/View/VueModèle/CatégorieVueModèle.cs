@@ -3,7 +3,6 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using LEASPAS.Annotations;
-using LEASPAS.Model;
 
 namespace LEASPAS.GUI.View.VueModèle
 {
@@ -12,7 +11,7 @@ namespace LEASPAS.GUI.View.VueModèle
         #region Données
 
         private readonly ReadOnlyCollection<CatégorieVueModèle> _enfants;
-        private readonly Catégorie _catégorie;
+        private readonly Model.Catégorie _catégorie;
 
 
         // Nom standard...
@@ -27,11 +26,11 @@ namespace LEASPAS.GUI.View.VueModèle
         /// Construit le vue modèle associé à la catégorie passée en paramètre
         /// </summary>
         /// <param name="catégorie">Catégorie à représenter</param>
-        public CatégorieVueModèle(Catégorie catégorie) : this(catégorie, null)
+        public CatégorieVueModèle(Model.Catégorie catégorie) : this(catégorie, null)
         {
         }
 
-        private CatégorieVueModèle(Catégorie catégorie, CatégorieVueModèle parent)
+        private CatégorieVueModèle(Model.Catégorie catégorie, CatégorieVueModèle parent)
         {
             _catégorie = catégorie;
             Parent = parent;

@@ -112,6 +112,12 @@
     <Compile Include="GUI\Core\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GUI\View\Catégorie\VueCatégorie.xaml.cs">
+      <DependentUpon>VueCatégorie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\View\Catégorie\VueCatégories.xaml.cs">
+      <DependentUpon>VueCatégories.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GUI\View\Etablissement\VueEtablissement.xaml.cs">
       <DependentUpon>VueEtablissement.xaml</DependentUpon>
     </Compile>
@@ -211,6 +217,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GUI\Core\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\Catégorie\VueCatégorie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\Catégorie\VueCatégories.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

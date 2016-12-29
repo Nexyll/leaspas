@@ -31,5 +31,10 @@ namespace LEASPAS.Model {
         public Catégorie()
         {
         }
+
+        public override string ToString()
+        {
+            return Nom;
+        }
     }
 }

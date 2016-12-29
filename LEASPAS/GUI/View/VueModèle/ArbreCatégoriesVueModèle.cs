@@ -14,7 +14,7 @@ namespace LEASPAS.GUI.View.VueModèle
 
         #region Constructeurs
 
-        public ArbreCatégoriesVueModèle(Catégorie catégorieParente)
+        public ArbreCatégoriesVueModèle(Model.Catégorie catégorieParente)
         {
             _catégorieParente = new CatégorieVueModèle(catégorieParente);
             Catégories = new ReadOnlyCollection<CatégorieVueModèle>(

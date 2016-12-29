@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LEASPAS.GUI.View;
+using LEASPAS.GUI.View.Catégorie;
 using LEASPAS.GUI.View.Etablissement;
 using ListeMotifs = LEASPAS.GUI.View.Motif.ListeMotifs;
 using NiveauVue = LEASPAS.GUI.View.Niveau.NiveauVue;
@@ -49,6 +50,11 @@ namespace LEASPAS.GUI.Core
         private void TileGestionEtablissements_OnClick(object sender, RoutedEventArgs e)
         {
             _mainWindow.ContentControl.Content = new VueEtablissements(_mainWindow);
+        }
+
+        private void TileGestionCategories_OnClick(object sender, RoutedEventArgs e)
+        {
+            _mainWindow.ContentControl.Content = new VueCatégories(_mainWindow);
         }
     }
 }

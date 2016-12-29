@@ -11,20 +11,20 @@ namespace LEASPAS.Model {
     [Serializable]
     public class Evenement {
         public DateTime Date { get; set; }
-        public Categorie Categorie { get; set; }
+        public Catégorie Catégorie { get; set; }
         public Eleve Eleve { get; set; }
 
-        public Evenement(DateTime date, Categorie categorie, Eleve eleve)
+        public Evenement(DateTime date, Catégorie catégorie, Eleve eleve)
         {
             Date = date;
-            Categorie = categorie;
+            Catégorie = catégorie;
             Eleve = eleve;
         }
 
         public Evenement()
         {
             Date = new DateTime();
-            Categorie = new Categorie();
+            Catégorie = new Catégorie();
             Eleve = new Eleve();
         }
     }

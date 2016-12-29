@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LEASPAS.GUI.View.VueModèle;
 using LEASPAS.Model;
 
 namespace LEASPAS.GUI.View
@@ -30,12 +32,15 @@ namespace LEASPAS.GUI.View
             DataContext = this;
             _evenement = evenement;
 
-            
             CollectionView collectionVueMotifsGlobaux = new CollectionView(_mainWindow.Collection.Motifs);
             ListBoxMotifs.ItemsSource = collectionVueMotifsGlobaux;
-            ListBoxMotifsEvenement.ItemsSource = _evenement.Eleve.Motifs;
-       
+            ListBoxMotifsEleve.ItemsSource = _evenement.Eleve.Motifs;
+            ComboBoxListeEleve.ItemsSource = mainWindow.Collection.Eleves;
+
+            ArbreCatégoriesVueModèle Catégories = new ArbreCatégoriesVueModèle(_mainWindow.Collection.Categories.First());
+            TreeViewCatégories.DataContext = Catégories;
         }
+
         /// <summary>
         /// Méthode appelée quand l'événement click du bouton >> levé.
         /// Cette méthode sert à ajouter un motif à l'élève si il ne le possède pas déjà.
@@ -47,6 +52,19 @@ namespace LEASPAS.GUI.View
             if (ListBoxMotifs.SelectedItem != null && !_evenement.Eleve.Motifs.Contains(ListBoxMotifs.SelectedItem))
             {
                 _evenement.Eleve.Motifs.Add(ListBoxMotifs.SelectedItem as Model.Motif);
+            }
+        }
+
+        /// <summary>
+        /// Supprime le motif séléctionné dans la liste des motifs de l'élève
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BouttonSupressionMotif_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (ListBoxMotifsEleve.SelectedItem != null)
+            {
+                _evenement.Eleve.Motifs.Remove(ListBoxMotifsEleve.SelectedItem as Model.Motif);
             }
         }
     }

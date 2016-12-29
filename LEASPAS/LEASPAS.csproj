@@ -142,6 +142,8 @@
     <Compile Include="GUI\View\Niveau\NiveauVue.xaml.cs">
       <DependentUpon>NiveauVue.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GUI\View\VueModèle\ArbreCatégoriesVueModèle.cs" />
+    <Compile Include="GUI\View\VueModèle\CatégorieVueModèle.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -149,7 +151,7 @@
     <Compile Include="Model\Eleve.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Categorie.cs" />
+    <Compile Include="Model\Catégorie.cs" />
     <Compile Include="Model\Etablissement.cs" />
     <Compile Include="Model\Evenement.cs" />
     <Compile Include="Model\Motif.cs" />
@@ -196,7 +198,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="GUI\Widgets\" />
+  </ItemGroup>
   <ItemGroup>
     <Page Include="GUI\Core\ChoixDonneeEnvironnement.xaml">
       <SubType>Designer</SubType>

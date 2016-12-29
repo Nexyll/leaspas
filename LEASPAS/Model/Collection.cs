@@ -10,13 +10,16 @@ namespace LEASPAS.Model
     [Serializable]
     public class Collection
     {
-        public ObservableCollection<Categorie> Categories { get; set; }
+        public ObservableCollection<Catégorie> Categories { get; set; }
         public ObservableCollection<Eleve> Eleves { get; set; }
         public ObservableCollection<Etablissement> Etablissements { get; set; }
         public ObservableCollection<Evenement> Evenements { get; set; }
         public ObservableCollection<Motif> Motifs { get; set; }
         public ObservableCollection<Niveau> Niveaux { get; set; }
         public ObservableCollection<Origine> Origines { get; set; }
+        
+        
+        
         /// <summary>
         /// Constructeur pour créer la base de donnée à partir des listes
         /// </summary>
@@ -27,7 +30,7 @@ namespace LEASPAS.Model
         /// <param name="motifs"></param>
         /// <param name="niveaux"></param>
         /// <param name="origines"></param>
-        public Collection(ObservableCollection<Categorie> categories, ObservableCollection<Eleve> eleves, ObservableCollection<Etablissement> etablissements, ObservableCollection<Evenement> evenements, ObservableCollection<Motif> motifs, ObservableCollection<Niveau> niveaux, ObservableCollection<Origine> origines)
+        public Collection(ObservableCollection<Catégorie> categories, ObservableCollection<Eleve> eleves, ObservableCollection<Etablissement> etablissements, ObservableCollection<Evenement> evenements, ObservableCollection<Motif> motifs, ObservableCollection<Niveau> niveaux, ObservableCollection<Origine> origines)
         {
             Categories = categories;
             Eleves = eleves;
@@ -54,7 +57,7 @@ namespace LEASPAS.Model
 
         public Collection()
         {
-            Categories = new ObservableCollection<Categorie>();
+            Categories = new ObservableCollection<Catégorie> {new Catégorie("Catégories")};
             Eleves = new ObservableCollection<Eleve>();
             Etablissements = new ObservableCollection<Etablissement>();
             Evenements = new ObservableCollection<Evenement>();

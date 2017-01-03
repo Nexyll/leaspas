@@ -8,8 +8,8 @@
         mc:Ignorable="d"
         Title="Ajout d'une nouvelle catégorie" Height="229.111" Width="374">
     <StackPanel Margin="20">
-        <TextBox Margin="4" controls:TextBoxHelper.UseFloatingWatermark="True" controls:TextBoxHelper.Watermark="Nom de la catégorie" Text="{Binding Catégorie.Nom}"/>
+        <TextBox Margin="4" Name="TextBoxNom" controls:TextBoxHelper.UseFloatingWatermark="True" controls:TextBoxHelper.Watermark="Nom de la catégorie" Text="{Binding Catégorie.Nom}"/>
         <ComboBox Margin="4" Name="ComboBoxParent"/>
-        <Button Margin="4" Name="ButtonValider">Ajouter</Button>
+        <Button Margin="4" Name="ButtonValider" Click="ButtonValider_OnClick">Ajouter</Button>
 </StackPanel>
 </controls:MetroWindow>

@@ -11,7 +11,6 @@ namespace LEASPAS.GUI.View.VueModèle
         #region Données
 
         private readonly ReadOnlyCollection<CatégorieVueModèle> _enfants;
-        private readonly Model.Catégorie _catégorie;
 
 
         // Nom standard...
@@ -32,11 +31,11 @@ namespace LEASPAS.GUI.View.VueModèle
 
         private CatégorieVueModèle(Model.Catégorie catégorie, CatégorieVueModèle parent)
         {
-            _catégorie = catégorie;
+            Catégorie = catégorie;
             Parent = parent;
 
             _enfants = new ReadOnlyCollection<CatégorieVueModèle>(
-                (from enfant in _catégorie.Enfants
+                (from enfant in Catégorie.Enfants
                         select new CatégorieVueModèle(enfant, this))
                     .ToList());
         }
@@ -52,12 +51,17 @@ namespace LEASPAS.GUI.View.VueModèle
 
         public string Nom
         {
-            get { return _catégorie.Nom; }
+            get { return Catégorie.Nom; }
         }
 
         #endregion
 
         #region Propriétées de présentation
+        /// <summary>
+        /// Catégorie représentée par la vue modèle.
+        /// </summary>
+        public readonly Model.Catégorie Catégorie;
+
 
         /// <summary>
         /// Permet à l'item de catégorie que l'on représente de savoir
@@ -101,7 +105,7 @@ namespace LEASPAS.GUI.View.VueModèle
 
         public override string ToString()
         {
-            return _catégorie.Nom;
+            return Catégorie.Nom;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

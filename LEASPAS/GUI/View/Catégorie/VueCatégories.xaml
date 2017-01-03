@@ -16,7 +16,7 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Label Grid.Column="0" Grid.Row="0" HorizontalContentAlignment="Center">Cliquez sur une catégorie pour la modifier</Label>
-        <TreeView Grid.Column="0" Name="TreeViewCatégories" Grid.Row="1" ItemsSource="{Binding Catégories}" >
+        <TreeView Grid.Column="0" Name="TreeViewCatégories" Grid.Row="1" ItemsSource="{Binding Catégories}" MouseDoubleClick="TreeViewCatégories_OnMouseDoubleClick" >
             <TreeView.ItemContainerStyle>
                 <Style TargetType="{x:Type TreeViewItem}" BasedOn="{StaticResource {x:Type TreeViewItem}}">
                     <Setter Property="Focusable" Value="{Binding IsFocusable, Mode=OneWay}" />

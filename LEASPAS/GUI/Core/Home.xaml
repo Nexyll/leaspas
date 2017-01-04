@@ -65,6 +65,8 @@
                                              Kind="Calendar" />
             </controls:Tile>
             <controls:Tile Title="Gestion des élèves"
+                           Name="TileGestionEleves"
+                           Click="TileGestionEleves_OnClick"
                                Style="{StaticResource LargeTileStyle}"
                                Background="#D2691E"
                                 HorizontalTitleAlignment="Center"

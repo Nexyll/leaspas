@@ -13,6 +13,7 @@ namespace LEASPAS.Model
     /// Représente la classe de l'élève (ex : 6, 5, 4, 3, 2nd, ...)
     /// Pour information. Le niveau n'est pas traité lorsque les statistiques sont générées. 
     /// </summary>
+    [Serializable]
     public class Niveau : INotifyPropertyChanged
     {
         private string _nom;
@@ -39,6 +40,11 @@ namespace LEASPAS.Model
         {
         }
 
+        public override string ToString()
+        {
+            return Nom;
+        }
+        [field: NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]

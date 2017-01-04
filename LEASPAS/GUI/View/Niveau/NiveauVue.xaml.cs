@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace LEASPAS.GUI.View.Niveau
@@ -15,9 +16,25 @@ namespace LEASPAS.GUI.View.Niveau
             InitializeComponent();
             DataContext = this;
             _mainWindow = mainWindow;
+            _mainWindow.OnContentQuit += MainWindowOnOnContentQuit;
             DataGridNiveaux.ItemsSource = _mainWindow.Collection.Niveaux;
+            DataGridNiveaux.CanUserAddRows = true;
         }
 
+        /// <summary>
+        /// Event handler pour l'évenement de changement de contenu dans la fenêtre principale
+        /// </summary>
+        private void MainWindowOnOnContentQuit()
+        {
+            DataGridNiveaux.CanUserAddRows = false;
+        }
+
+
+        /// <summary>
+        /// Event handler appelé quand l'utilisateur ajoute un niveau
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonAjoutNiveau_OnClick(object sender, RoutedEventArgs e)
         {
             Niveau niveau = new Niveau();

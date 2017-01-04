@@ -50,6 +50,11 @@ namespace LEASPAS.Model {
         {
         }
 
+        public override string ToString()
+        {
+            return Type + " " + Nom;
+        }
+        [field: NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]

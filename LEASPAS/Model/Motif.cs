@@ -32,6 +32,7 @@ namespace LEASPAS.Model
         {
         }
 
+        [field: NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]

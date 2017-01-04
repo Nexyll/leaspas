@@ -28,6 +28,12 @@ namespace LEASPAS.GUI.View
             Origine = origine;
         }
 
+
+        /// <summary>
+        /// Event handler appelé quand l'utilisateur valide
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonValidation_OnClick(object sender, RoutedEventArgs e)
         {
             if (TextBoxNomOrigine.Text != "")

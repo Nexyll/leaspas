@@ -28,9 +28,17 @@ namespace LEASPAS.GUI.View.Etablissement
             InitializeComponent();
             DataContext = this;
             _mainWindow = mainWindow;
+            _mainWindow.OnContentQuit += MainWindowOnOnContentQuit;
             DataGridEtablissement.ItemsSource = _mainWindow.Collection.Etablissements;
-                        
+            DataGridEtablissement.CanUserAddRows = true;
+
         }
+
+        private void MainWindowOnOnContentQuit()
+        {
+            DataGridEtablissement.CanUserAddRows = false;
+        }
+
         /// <summary>
         /// Ajout
         /// </summary>

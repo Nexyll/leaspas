@@ -32,8 +32,7 @@ namespace LEASPAS.GUI.View
             DataContext = this;
             _evenement = evenement;
 
-            CollectionView collectionVueMotifsGlobaux = new CollectionView(_mainWindow.Collection.Motifs);
-            ListBoxMotifs.ItemsSource = collectionVueMotifsGlobaux;
+            ListBoxMotifs.ItemsSource = _mainWindow.Collection.Motifs;
             ListBoxMotifsEleve.ItemsSource = _evenement.Eleve.Motifs;
             ComboBoxListeEleve.ItemsSource = mainWindow.Collection.Eleves;
 

@@ -13,6 +13,7 @@ namespace LEASPAS.Model {
     /// Représente les catégories d'évènements. 
     /// Un évènement a forcément une seule et unique catégorie, nécéssairement une catégorie enfant, sauf si la catégorie parente n'a pas d'enfant (cas de "visite à domicile").
     /// </summary>
+    [Serializable]
     public class Catégorie {
         private readonly List<Catégorie> _enfants = new List<Catégorie>();
 

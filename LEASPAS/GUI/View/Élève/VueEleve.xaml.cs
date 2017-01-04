@@ -14,22 +14,24 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LEASPAS.Model;
 
-namespace LEASPAS.GUI.View.Élève {
+namespace LEASPAS.GUI.View.Élève
+{
     /// <summary>
-    /// Logique d'interaction pour VueEleves.xaml
+    /// Logique d'interaction pour VueEleve.xaml
     /// </summary>
-    public partial class VueEleves : UserControl
+    public partial class VueEleve : UserControl
     {
+        public Eleve Eleve { get; set; }
         private MainWindow _mainWindow;
-        public VueEleves(MainWindow mainWindow) {
-            InitializeComponent();
-            _mainWindow = mainWindow;
-            DataGridEleves.ItemsSource = _mainWindow.Collection.Eleves;
-        }
-
-        private void ButtonAjout_OnClick(object sender, RoutedEventArgs e)
+        public VueEleve(Eleve eleve, MainWindow mainWindow)
         {
-            _mainWindow.ContentControl.Content = new VueEleve(new Eleve(), _mainWindow);
+            InitializeComponent();
+            Eleve = eleve;
+            _mainWindow = mainWindow;
+            ComboBoxSexe.ItemsSource = Enum.GetValues(typeof(Sexe));
+            ComboBoxEtablissement.ItemsSource = _mainWindow.Collection.Etablissements;
+            ComboBoxNiveau.ItemsSource = _mainWindow.Collection.Niveaux;
+            ComboBoxOrigine.ItemsSource = _mainWindow.Collection.Origines;
         }
     }
 }

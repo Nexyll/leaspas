@@ -8,14 +8,14 @@ namespace LEASPAS.Model
     {
         public string Nom { get; set; }
         public string Prenom { get; set; }
-        public char Sexe { get; set; }
+        public Sexe Sexe { get; set; }
         public Niveau Niveau { get; set; } 
         public Origine Origine { get; set; }
         public Etablissement Etablissement { get; set; }
         public ObservableCollection<Motif> Motifs { get; set; } = new ObservableCollection<Motif>();
         public ObservableCollection<Evenement> Evenements { get; set; } = new ObservableCollection<Evenement>();
 
-        public Eleve(string nom, string prenom, char sexe, Niveau niveau, Origine origine, Etablissement etablissement)
+        public Eleve(string nom, string prenom, Sexe sexe, Niveau niveau, Origine origine, Etablissement etablissement)
         {
             Nom = nom;
             Prenom = prenom;
@@ -37,5 +37,17 @@ namespace LEASPAS.Model
             :this(eleve.Nom, eleve.Prenom, eleve.Sexe, eleve.Niveau, eleve.Origine, eleve.Etablissement)
         {
         }
+
+        public override string ToString()
+        {
+            return Prenom + " " + Nom;
+        }
+    }
+
+    public enum Sexe
+    {
+        Masculin,
+        Féminin,
+        Autre
     }
 }

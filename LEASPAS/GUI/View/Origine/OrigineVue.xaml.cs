@@ -30,6 +30,12 @@ namespace LEASPAS.GUI.View
             ListViewOrigines.ItemsSource = _mainWindow.Collection.Origines;
         }
 
+
+        /// <summary>
+        /// Event handler pour ajouter une origine
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonAjouterOrigine_OnClick(object sender, RoutedEventArgs e)
         {
             Origine origine = new Origine();
@@ -40,6 +46,11 @@ namespace LEASPAS.GUI.View
             }
         }
 
+        /// <summary>
+        /// Gestionnaire d'évenement quand on clique sur le boutton "modifier une origine"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonModifierOrigine_OnClick(object sender, RoutedEventArgs e)
         {
             Origine origine = ListViewOrigines.SelectedItem as Origine;

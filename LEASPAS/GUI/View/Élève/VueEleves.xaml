@@ -11,7 +11,11 @@
                 <ColumnDefinition />
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <DataGrid Name="DataGridEleves"></DataGrid>
+            <DataGrid Grid.Column="0" Name="DataGridEleves"></DataGrid>
+            <StackPanel Orientation="Vertical" Grid.Column="1">
+                <Button Name="ButtonAjout" Click="ButtonAjout_OnClick" Margin="4">Ajouter un éléve</Button>
+                <Button Name="ButtonModifer" Margin="4">Modifier l'élève</Button>
+            </StackPanel>
         </Grid>
     </GroupBox>
     

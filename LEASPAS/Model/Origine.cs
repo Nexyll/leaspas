@@ -12,6 +12,7 @@ namespace LEASPAS.Model
     /// <summary>
     /// Indique le tiers qui est à l'origine de la prise de contact de l'élève avec l'assistante sociale
     /// </summary>
+    [Serializable]
     public class Origine : INotifyPropertyChanged
     {
         private string _nom;
@@ -38,6 +39,11 @@ namespace LEASPAS.Model
         {
         }
 
+        public override string ToString()
+        {
+            return Nom;
+        }
+        [field: NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]

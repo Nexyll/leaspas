@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="LEASPAS.GUI.View.Élève.VueEleve"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LEASPAS.GUI.View.Élève"
+             xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             mc:Ignorable="d">
+    <GroupBox Header="Ajout d'un élève">
+        <StackPanel Orientation="Vertical">
+            <Label>Identité de l'élève</Label>
+            <Border BorderBrush="{DynamicResource AccentBaseColorBrush}" BorderThickness="1"/>
+            <TextBox Margin="4" controls:TextBoxHelper.Watermark="Nom" controls:TextBoxHelper.UseFloatingWatermark="True" />
+            <TextBox Margin="4" controls:TextBoxHelper.Watermark="Prènom" controls:TextBoxHelper.UseFloatingWatermark="True" />
+            <ComboBox Margin="4" Name="ComboBoxSexe" />
+            
+            <Label>Scolarité de l'élève</Label>
+            <Border BorderBrush="{DynamicResource AccentBaseColorBrush}" BorderThickness="1"/>
+            <ComboBox Margin="4" Name="ComboBoxEtablissement"/>
+            <ComboBox Margin="4" Name="ComboBoxNiveau" />
+            
+            <Label>Scolarité de l'élève</Label>
+            <Border BorderBrush="{DynamicResource AccentBaseColorBrush}" BorderThickness="1"/>
+            <ComboBox Margin="4" Name="ComboBoxOrigine" />
+            
+            
+
+        </StackPanel>
+    </GroupBox>
+    
+
+</UserControl>

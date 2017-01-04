@@ -32,6 +32,13 @@ namespace LEASPAS.GUI.View.Catégorie
             TreeViewCatégories.DataContext = _catégories;
         }
 
+
+
+        /// <summary>
+        /// Event handler du bouton "ajouter une catégorie"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonAjout_OnClick(object sender, RoutedEventArgs e)
         {
             Model.Catégorie catégorie = new Model.Catégorie();
@@ -45,6 +52,11 @@ namespace LEASPAS.GUI.View.Catégorie
             }
         }
 
+        /// <summary>
+        /// Event handler du double click sur une catégorie
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TreeViewCatégories_OnMouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             if (TreeViewCatégories.SelectedItem == null) return;
@@ -63,6 +75,12 @@ namespace LEASPAS.GUI.View.Catégorie
         }
         
 
+        /// <summary>
+        /// Retourne la catégorie parente d'une catégorie
+        /// </summary>
+        /// <param name="racine">Catégorie racine à partir de la quelle efféctuée la recherche</param>
+        /// <param name="catégorie">Catégorie dont il faut trouver le parent</param>
+        /// <returns>La catégorie parente du paramètre "catégorie"</returns>
         //TODO déplacer dans le vue modèle
         private Model.Catégorie CatégorieParente(Model.Catégorie racine, Model.Catégorie catégorie)
         {

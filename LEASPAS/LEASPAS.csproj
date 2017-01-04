@@ -150,6 +150,9 @@
     </Compile>
     <Compile Include="GUI\View\VueModèle\ArbreCatégoriesVueModèle.cs" />
     <Compile Include="GUI\View\VueModèle\CatégorieVueModèle.cs" />
+    <Compile Include="GUI\View\Élève\VueEleve.xaml.cs">
+      <DependentUpon>VueEleve.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GUI\View\Élève\VueEleves.xaml.cs">
       <DependentUpon>VueEleves.xaml</DependentUpon>
     </Compile>
@@ -166,6 +169,8 @@
     <Compile Include="Model\Motif.cs" />
     <Compile Include="Model\Niveau.cs" />
     <Compile Include="Model\Origine.cs" />
+    <Compile Include="Model\Persistance\ISauvegarde.cs" />
+    <Compile Include="Model\Persistance\SauvegardeBinaire.cs" />
     <Compile Include="Properties\Annotations1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -268,6 +273,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GUI\View\Niveau\NiveauVue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\Élève\VueEleve.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

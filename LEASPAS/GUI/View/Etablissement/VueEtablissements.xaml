@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="LEASPAS.GUI.View.Etablissement.VueEtablissements"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LEASPAS.GUI.View.Etablissement"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <!--<ListView Name="ListViewEtablissements" Grid.Column="0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Nom" DisplayMemberBinding="{Binding Nom}" />
+                    <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}"/>
+                    <GridViewColumn Header="Population" DisplayMemberBinding="{Binding Population}" />
+                </GridView>
+            </ListView.View>
+        </ListView>-->
+        <DataGrid Name="DataGridEtablissement" >
+            <!-- AutoGenerateColumns="False"-->
+           <!-- <DataGrid.Columns>
+                <DataGridTextColumn Header="Type" Binding="{Binding Type, ValidatesOnExceptions=False, FallbackValue=" IsReadOnly="False"/>
+            </DataGrid.Columns>-->
+        </DataGrid>
+        <StackPanel Grid.Column="1">
+            <Button Name="BoutonAjouter" Click="BoutonAjouter_OnClick">Ajouter un etablissement</Button>
+            <Button Name="BoutonModifier">Modifier un etablissement</Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

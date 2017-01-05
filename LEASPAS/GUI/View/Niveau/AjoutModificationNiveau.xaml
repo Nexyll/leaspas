@@ -1,0 +1,17 @@
+﻿<Window x:Class="LEASPAS.GUI.View.Niveau.AjoutModificationNiveau"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LEASPAS.GUI.View.Niveau"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"
+        Title="AjoutModificationNiveau" Height="300" Width="300">
+    <StackPanel>
+        <TextBox controls:TextBoxHelper.Watermark="Saisissez le nom du nouveau niveau"
+             controls:TextBoxHelper.UseFloatingWatermark="True" 
+                 Text="{Binding Niveau.Nom}"
+                 Name="TextBoxNomNiveau" />
+        <Button Name="ButtonValidation" Click="ButtonValidation_OnClick">Valider</Button>
+    </StackPanel>
+</Window>

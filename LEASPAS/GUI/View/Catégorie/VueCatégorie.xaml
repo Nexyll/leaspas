@@ -1,0 +1,15 @@
+﻿<controls:MetroWindow x:Class="LEASPAS.GUI.View.Catégorie.VueCatégorie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LEASPAS.GUI.View.Catégorie"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"
+        Title="Ajout d'une nouvelle catégorie" Height="229.111" Width="374">
+    <StackPanel Margin="20">
+        <TextBox Margin="4" Name="TextBoxNom" controls:TextBoxHelper.UseFloatingWatermark="True" controls:TextBoxHelper.Watermark="Nom de la catégorie" Text="{Binding Catégorie.Nom}"/>
+        <ComboBox Margin="4" Name="ComboBoxParent"/>
+        <Button Margin="4" Name="ButtonValider" Click="ButtonValider_OnClick">Ajouter</Button>
+</StackPanel>
+</controls:MetroWindow>

@@ -5,20 +5,27 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LEASPAS.Model {
+    /// <summary>
+    /// Représente un rendez-vous avec l'élève.
+    /// </summary>
+    [Serializable]
     public class Evenement {
         public DateTime Date { get; set; }
-        public Categorie Categorie { get; set; }
+        public Catégorie Catégorie { get; set; }
         public Eleve Eleve { get; set; }
 
-        public Evenement(DateTime date, Categorie categorie, Eleve eleve)
+        public Evenement(DateTime date, Catégorie catégorie, Eleve eleve)
         {
             Date = date;
-            Categorie = categorie;
+            Catégorie = catégorie;
             Eleve = eleve;
         }
 
         public Evenement()
         {
+            Date = new DateTime();
+            Catégorie = new Catégorie();
+            Eleve = new Eleve();
         }
     }
 }

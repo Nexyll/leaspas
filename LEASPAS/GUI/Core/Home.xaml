@@ -1,0 +1,139 @@
+﻿<UserControl x:Class="LEASPAS.GUI.Core.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LEASPAS.GUI.Core"
+             xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d"
+             VerticalAlignment="Stretch" 
+             HorizontalAlignment="Stretch"
+             >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LargeTileStyle" TargetType="controls:Tile">
+                <Setter Property="Height" Value="125" />
+                <Setter Property="TitleFontSize" Value="14" />
+                <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
+                <Setter Property="TextOptions.TextRenderingMode" Value="ClearType" />
+                <Setter Property="Width" Value="300" />
+            </Style>
+
+            <Style x:Key="SmallTileStyle" TargetType="controls:Tile">
+                <Setter Property="Height" Value="125" />
+                <Setter Property="TitleFontSize" Value="10" />
+                <Setter Property="TextOptions.TextFormattingMode" Value="Ideal" />
+                <Setter Property="TextOptions.TextRenderingMode" Value="ClearType" />
+                <Setter Property="Width" Value="147" />
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="0"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Foreground="{DynamicResource BlackBrush}"
+                       FontFamily="Segoe UI"
+                       FontSize="30"
+                       FontWeight="Light"
+                       Margin="20"
+                       Text="Bienvenue dans LEASPAS !" />
+
+        <WrapPanel Grid.Row="1"
+                       Grid.Column="0"
+                       Width="Auto"
+                       Height="Auto"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top">
+            <controls:Tile Title="Gérer les évenements"
+                           Name="TileManageEvents"
+                           Click="TileManageEvents_OnClick"
+                               Margin="3"
+                               Style="{StaticResource LargeTileStyle}"
+                               Background="Teal"
+                               controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                               HorizontalTitleAlignment="Center">
+                <iconPacks:PackIconModern Width="40"
+                                             Height="40"
+                                             Kind="Calendar" />
+            </controls:Tile>
+            <controls:Tile Title="Gestion des élèves"
+                           Name="TileGestionEleves"
+                           Click="TileGestionEleves_OnClick"
+                               Style="{StaticResource LargeTileStyle}"
+                               Background="#D2691E"
+                                HorizontalTitleAlignment="Center"
+                               controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                           
+                           >
+                <iconPacks:PackIconModern Width="40"
+                                             Height="40"
+                                             Kind="PeopleMultiple" />
+            </controls:Tile>
+            <controls:Tile Title="Édition des statistiques"
+                               Style="{StaticResource LargeTileStyle}"
+                               Background="Green"
+                           controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                           HorizontalTitleAlignment="Center">
+                <iconPacks:PackIconEntypo Width="40"
+                                             Height="40"
+                                             Kind="LineGraph" />
+            </controls:Tile>
+            <controls:Tile Title="Editer les données d'environnement"
+                               Margin="3"
+                           Name="TileEditionDonnéesEnvironnements"
+                           Click="TileEditionDonnéesEnvironnements_OnClick"
+                               Style="{StaticResource LargeTileStyle}"
+                           Background="BlueViolet"
+                           controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                           HorizontalTitleAlignment="Center"
+                               >
+                <iconPacks:PackIconModern Width="40"
+                                                  Height="40"
+                                                  Kind="City" />
+            </controls:Tile>
+            <controls:Tile Title="Sauvegardes"
+                               Margin="3"
+                               Style="{StaticResource LargeTileStyle}"
+                           controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                           HorizontalTitleAlignment="Center"
+                               >
+                <iconPacks:PackIconMaterial Width="40"
+                                                  Height="40"
+                                                  Kind="BackupRestore" />
+            </controls:Tile>
+            <StackPanel Orientation="Horizontal">
+                <controls:Tile Title="Paramètres"
+                               Style="{StaticResource SmallTileStyle}"
+                               Background="DimGray"
+                               controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                               HorizontalTitleAlignment="Center">
+                    <iconPacks:PackIconMaterial Width="40"
+                                             Height="40"
+                                              Kind="Settings" />
+                </controls:Tile>
+                <controls:Tile Title="Contribuer"
+                               Style="{StaticResource SmallTileStyle}"
+                               Background="#1E90FF"
+                               controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                               HorizontalTitleAlignment="Center"
+                               >
+                    <iconPacks:PackIconOcticons Width="40"
+                                               Height="40"
+                                               Kind="MarkGithub" />
+                </controls:Tile>
+            </StackPanel>
+            
+        </WrapPanel>
+    </Grid>
+</UserControl>
+
+
+

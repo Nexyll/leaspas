@@ -26,6 +26,7 @@ namespace LEASPAS.GUI.View.Élève
         public VueEleve(Eleve eleve, MainWindow mainWindow)
         {
             InitializeComponent();
+            DataContext = this;
             Eleve = eleve;
             _mainWindow = mainWindow;
             ComboBoxSexe.ItemsSource = Enum.GetValues(typeof(Sexe));

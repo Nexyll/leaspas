@@ -11,10 +11,21 @@
                 <ColumnDefinition />
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <DataGrid Grid.Column="0" Name="DataGridEleves"></DataGrid>
+            <DataGrid Grid.Column="0" Name="DataGridEleves" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Nom}" Header="Nom" />
+                    <DataGridTextColumn Binding="{Binding Prenom}" Header="Prénom" />
+                    <DataGridTextColumn Binding="{Binding Sexe}" Header="Sexe" />
+                    <DataGridTextColumn Binding="{Binding Origine}" Header="Origine" />
+                    <DataGridTextColumn Binding="{Binding Etablissement}" Header="Etablissement" />
+                    <DataGridTextColumn Binding="{Binding Niveau}" Header="Niveau" />
+                </DataGrid.Columns>
+
+            </DataGrid>
             <StackPanel Orientation="Vertical" Grid.Column="1">
                 <Button Name="ButtonAjout" Click="ButtonAjout_OnClick" Margin="4">Ajouter un éléve</Button>
                 <Button Name="ButtonModifer" Margin="4">Modifier l'élève</Button>
+                <Button Name="ButtonVueDetail" Margin="4" Click="ButtonVueDetail_OnClick"><TextBlock TextAlignment="Center">Afficher une vue <LineBreak/> détaillée de l'élève</TextBlock></Button>
             </StackPanel>
         </Grid>
     </GroupBox>

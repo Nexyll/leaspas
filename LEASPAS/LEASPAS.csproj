@@ -157,6 +157,9 @@
     </Compile>
     <Compile Include="GUI\View\VueModèle\ArbreCatégoriesVueModèle.cs" />
     <Compile Include="GUI\View\VueModèle\CatégorieVueModèle.cs" />
+    <Compile Include="GUI\View\Élève\VueDetailsEleve.xaml.cs">
+      <DependentUpon>VueDetailsEleve.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GUI\View\Élève\VueEleve.xaml.cs">
       <DependentUpon>VueEleve.xaml</DependentUpon>
     </Compile>
@@ -279,6 +282,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GUI\View\Niveau\NiveauVue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\View\Élève\VueDetailsEleve.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

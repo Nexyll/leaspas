@@ -31,5 +31,14 @@ namespace LEASPAS.GUI.View.Élève {
         {
             _mainWindow.ContentControl.Content = new VueEleve(new Eleve(), _mainWindow);
         }
+
+        private void ButtonVueDetail_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (DataGridEleves.SelectedItem == null)
+            {
+                return;
+            }
+            _mainWindow.ContentControl.Content = new VueDetailsEleve(DataGridEleves.SelectedItem as Eleve, _mainWindow);
+        }
     }
 }

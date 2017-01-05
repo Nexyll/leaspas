@@ -10,18 +10,18 @@
         <StackPanel Orientation="Vertical">
             <Label>Identité de l'élève</Label>
             <Border BorderBrush="{DynamicResource AccentBaseColorBrush}" BorderThickness="1"/>
-            <TextBox Margin="4" controls:TextBoxHelper.Watermark="Nom" controls:TextBoxHelper.UseFloatingWatermark="True" />
-            <TextBox Margin="4" controls:TextBoxHelper.Watermark="Prènom" controls:TextBoxHelper.UseFloatingWatermark="True" />
-            <ComboBox Margin="4" Name="ComboBoxSexe" />
+            <TextBox Margin="4" controls:TextBoxHelper.Watermark="Nom" Text="{Binding Eleve.Nom}" controls:TextBoxHelper.UseFloatingWatermark="True" />
+            <TextBox Margin="4" controls:TextBoxHelper.Watermark="Prènom" Text="{Binding Eleve.Prenom}" controls:TextBoxHelper.UseFloatingWatermark="True" />
+            <ComboBox Margin="4" SelectedItem="{Binding Eleve.Sexe}" Name="ComboBoxSexe" />
             
             <Label>Scolarité de l'élève</Label>
             <Border BorderBrush="{DynamicResource AccentBaseColorBrush}" BorderThickness="1"/>
-            <ComboBox Margin="4" Name="ComboBoxEtablissement"/>
-            <ComboBox Margin="4" Name="ComboBoxNiveau" />
+            <ComboBox Margin="4" SelectedItem="{Binding Eleve.Etablissement}" Name="ComboBoxEtablissement"/>
+            <ComboBox Margin="4" SelectedItem="{Binding Eleve.Niveau}" Name="ComboBoxNiveau" />
             
             <Label>Scolarité de l'élève</Label>
             <Border BorderBrush="{DynamicResource AccentBaseColorBrush}" BorderThickness="1"/>
-            <ComboBox Margin="4" Name="ComboBoxOrigine" />
+            <ComboBox Margin="4" SelectedItem="{Binding Eleve.Origine}" Name="ComboBoxOrigine" />
 
             <Button Name="buttonValidation" Click="buttonValidation_Click">Valider</Button>
 

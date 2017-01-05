@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="LEASPAS.GUI.View.Élève.VueDetailsEleve"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LEASPAS.GUI.View.Élève"
+             mc:Ignorable="d">
+    <GroupBox Header="Affichage détaillé">
+        <StackPanel Orientation="Vertical">
+            <Label FontWeight="Bold" FontSize="14">Identité de l'élève</Label>
+            <Border BorderBrush="{DynamicResource AccentBaseColorBrush}" BorderThickness="1"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="{Binding Eleve.Nom}" />
+                <Label> </Label>
+                <Label Content="{Binding Eleve.Prenom}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>Etablissement :</Label>
+                <Label Content="{Binding Eleve.Etablissement}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>Niveau :</Label>
+                <Label Content="{Binding Eleve.Niveau}" />
+            </StackPanel>
+            <Label FontWeight="Bold" FontSize="14">Origine</Label>
+            <Border BorderBrush="{DynamicResource AccentBaseColorBrush}" BorderThickness="1"/>
+            <Label Content="{Binding Eleve.Origine}" />
+            <GroupBox Header="Liste des motifs de l'élève">
+                <ListView ItemsSource="{Binding Eleve.Motifs}"/>
+            </GroupBox>
+            <GroupBox Header="Liste des évènements de l'élève">
+                <ListView ItemsSource="{Binding Eleve.Evenements}"/>
+            </GroupBox>
+            
+        </StackPanel>
+    </GroupBox>
+
+</UserControl>

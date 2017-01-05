@@ -16,12 +16,17 @@ namespace LEASPAS.Model {
     [Serializable]
     public class Catégorie {
         private readonly List<Catégorie> _enfants = new List<Catégorie>();
-
+        /// <summary>
+        /// Liste des enfants de la catégorie
+        /// </summary>
         public List<Catégorie> Enfants
         {
             get { return _enfants; }
         }
 
+        /// <summary>
+        /// Nom de la catégorie
+        /// </summary>
         public string Nom { get; set; }
 
         public Catégorie(string nom)

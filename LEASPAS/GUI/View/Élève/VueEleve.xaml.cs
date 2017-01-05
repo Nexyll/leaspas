@@ -33,5 +33,12 @@ namespace LEASPAS.GUI.View.Élève
             ComboBoxNiveau.ItemsSource = _mainWindow.Collection.Niveaux;
             ComboBoxOrigine.ItemsSource = _mainWindow.Collection.Origines;
         }
+
+        private void buttonValidation_Click(object sender, RoutedEventArgs e)
+        {
+            
+            _mainWindow.Collection.Eleves.Add(Eleve);
+            _mainWindow.ContentControl.Content = new VueEleves(_mainWindow);
+        }
     }
 }

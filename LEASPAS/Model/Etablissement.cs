@@ -6,8 +6,19 @@ using LEASPAS.Annotations;
 namespace LEASPAS.Model {
     [Serializable]
     public class Etablissement : INotifyPropertyChanged {
+        /// <summary>
+        /// Type de l'établissement (exemple : lycée, collège, ...)
+        /// </summary>
         private string _type;
+
+        /// <summary>
+        /// Nom de l'établissement
+        /// </summary>
         private string _nom;
+
+        /// <summary>
+        /// Nombre d'élève scolarisé dans l'établissement
+        /// </summary>
         private int _population;
 
         public string Nom

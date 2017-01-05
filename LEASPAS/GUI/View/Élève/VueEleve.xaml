@@ -22,8 +22,8 @@
             <Label>Scolarité de l'élève</Label>
             <Border BorderBrush="{DynamicResource AccentBaseColorBrush}" BorderThickness="1"/>
             <ComboBox Margin="4" Name="ComboBoxOrigine" />
-            
-            
+
+            <Button Name="buttonValidation" Click="buttonValidation_Click">Valider</Button>
 
         </StackPanel>
     </GroupBox>
